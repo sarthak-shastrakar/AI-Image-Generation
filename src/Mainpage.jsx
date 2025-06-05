@@ -184,8 +184,8 @@ export default function AIImageGeneratorLanding() {
   const galleryImages = [
     {
       id: 1,
-      image: "/images/ai-gallery-1.png",
-      prompt: "Futuristic cityscape at sunset",
+      image: "/images/ai_image.webp",
+      prompt: "Sci-fi cityscapes, magical forests, and imaginative scenes.",
       category: "landscape",
       likes: 1247,
       views: 8934,
@@ -200,8 +200,8 @@ export default function AIImageGeneratorLanding() {
     },
     {
       id: 3,
-      image: "/images/ai-gallery-3.png",
-      prompt: "Mystical forest with glowing elements",
+      image: "/images/ai_image_2.webp",
+      prompt: "Perfect for baby portraits, family visuals, and storybook-style images.",
       category: "fantasy",
       likes: 2156,
       views: 12847,
@@ -224,7 +224,7 @@ export default function AIImageGeneratorLanding() {
     },
     {
       id: 6,
-      image: "/images/ai-gallery-6.png",
+      image: "/images/laptop-image.webp",
       prompt: "Vintage sci-fi movie poster style",
       category: "vintage",
       likes: 1456,
@@ -268,7 +268,7 @@ export default function AIImageGeneratorLanding() {
         <div className="nav-container">
           <motion.div className="nav-logo" whileHover={{ scale: 1.05 }}>
             <Sparkles className="w-6 h-6" />
-            <span>AI Studio</span>
+            <span>Visionary AI</span>
           </motion.div>
 
           <div className="nav-links">
@@ -295,7 +295,7 @@ export default function AIImageGeneratorLanding() {
             </motion.a>
           </div>
 
-          <motion.button
+          {/* <motion.button
             className="nav-cta"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -306,7 +306,7 @@ export default function AIImageGeneratorLanding() {
             >
               Get Started
             </a>
-          </motion.button>
+          </motion.button> */}
 
           <motion.button
             className="mobile-menu-toggle"
@@ -436,9 +436,10 @@ export default function AIImageGeneratorLanding() {
             className="hero-description-interactive"
             variants={itemVariants}
           >
-            Transform your imagination into stunning visuals with our
-            cutting-edge AI technology. Generate, edit, and perfect your artwork
-            in seconds.
+            Transform your imagination into stunning visuals using the power of
+            artificial intelligence. Our AI Image Generator allows you to enter
+            a text prompt and instantly generate high-quality, realistic images.
+            <span> Try it now and turn words into visuals instantly!</span>
           </motion.p>
 
           <motion.div
@@ -810,7 +811,7 @@ export default function AIImageGeneratorLanding() {
                   <div className="gallery-content-interactive">
                     <p className="gallery-prompt">"{item.prompt}"</p>
                     <div className="gallery-actions">
-                      <motion.button
+                      {/* <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -827,7 +828,7 @@ export default function AIImageGeneratorLanding() {
                         whileTap={{ scale: 0.9 }}
                       >
                         <Download className="w-4 h-4" />
-                      </motion.button>
+                      </motion.button> */}
                     </div>
                   </div>
                 </motion.div>
@@ -922,7 +923,7 @@ export default function AIImageGeneratorLanding() {
                 src={selectedImage.image || "/placeholder.svg"}
                 alt={selectedImage.prompt}
               />
-              <div className="modal-info">
+               <div className="modal-info">
                 <h3>"{selectedImage.prompt}"</h3>
                 <div className="modal-stats">
                   <span>
@@ -932,7 +933,7 @@ export default function AIImageGeneratorLanding() {
                     <Eye className="w-4 h-4" /> {selectedImage.views}
                   </span>
                 </div>
-              </div>
+              </div> 
               <motion.button
                 className="modal-close"
                 onClick={() => setSelectedImage(null)}
